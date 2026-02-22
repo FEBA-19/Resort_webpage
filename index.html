@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK-10</title>
+    <!-- Fontawesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        /* Outer wrapper (window) */
+        .gallery-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+            background: #f8f9fa;
+        }
+
+        /* Moving track */
+        .gallery-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: scroll 20s linear infinite;
+        }
+
+        /* Pause on hover */
+        .gallery-wrapper:hover .gallery-track {
+            animation-play-state: paused;
+        }
+
+        /* Card styling */
+        .gallery-card {
+            min-width: 250px;
+        }
+
+        .gallery-card img {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Animation */
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bootstrap script link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-success navbar-dark py-0">
+        <div class="container ms-5">
+            <a class="navbar-brand" href="#">
+                <img src="./Images/Logo.png" alt="LOGO" width="100" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-5">
+                        <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            href="#rooms">Rooms</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            href="#amenities">Amenities</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            href="#activities">Activities</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Home -->
+    <section class="home" id="home">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true"
+            data-bs-pause="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img height="726px"
+                        src="https://www.onceupontheriver.com/wp-content/uploads/2017/04/tea-valley-munnar.jpg"
+                        class="d-block w-100" alt="Image1">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img height="726px" src="./Images/img2.jpg" class="d-block w-100" alt="Image2">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img height="726px" src="./Images/Carousal_img_3.jpg" class="d-block w-100" alt="Image3">
+                </div>
+                <div
+                    class="carousel-caption text-light p-3 d-flex flex-column justify-content-center align-items-start text-start">
+                    <p class="fs-1 fw-bold">Misty Highlands</p>
+                    <p class="fw-bolder">Escape to the Heart of the hills <br> Wake up to rolling Tea gardens,
+                        drifting mist
+                        and the soothing silence of the mountains.
+                    </p>
+                    <a class="btn btn-secondary" href="#rooms">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid">
+        <!-- About -->
+        <section id="about" class="mt-5">
+            <h4>About</h4>
+            <p class="pt-3">
+                Nestled amidst the lush green slopes of Munnar, Misty Highlands is a sanctuary for travelers seeking
+                peace, comfort, and a deeper connection with nature. Surrounded by endless tea plantations and cool
+                mountain air, our resort blends elegant living with the raw beauty of Kerala's highlands.
+
+                Wake up to golden sunrises painting the mist-covered hills, spend your afternoons immersed in the
+                soothing sounds of nature, and unwind in the evening as the sky transforms into a canvas of soft
+                mountain hues. Every corner of Misty Highlands is thoughtfully designed to complement the serene
+                landscape, offering spacious rooms, panoramic balconies, and warm hospitality that makes you feel
+                instantly at home.<br><br>
+
+                Our architecture reflects a harmonious blend of contemporary comfort and traditional charm, ensuring
+                that modern amenities coexist seamlessly with the natural surroundings. Whether you choose to relax by
+                the infinity pool, indulge in rejuvenating spa therapies, or explore nearby trails and tea estates, your
+                stay promises a perfect balance of relaxation and adventure.
+
+                Whether you are planning a romantic escape, a family holiday, or a quiet retreat from city life, every
+                moment here is designed to help you slow down, breathe deeply, and rediscover tranquility. At Misty
+                Highlands, we don't just offer a stay — we offer an experience that lingers long after you leave.</p>
+        </section>
+        <!-- Rooms -->
+        <section id="rooms" class="mt-5">
+            <div>
+                <h4>Rooms and Suites</h4>
+                <p class="pt-3">Thoughtfully designed with warmth and sophistication, our rooms offer panoramic views of
+                    mist-covered
+                    valleys and emerald landscapes. Each space is crafted to provide both luxury and comfort, ensuring a
+                    stay that feels effortlessly relaxing.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img height="38.5%"
+                            src="https://kondodyhotels.com/images/resorts/the-valle/gallery/valle-luxe-bedroom-2.jpg"
+                            class="card-img-top" alt="Image1">
+                        <div class="card-body bg-success text-light">
+                            <h5 class="card-title pt-1">Deluxe Valley View Room <br><br> ₹6,500 / night </h5>
+                            <p class="card-text">Wake up to breathtaking views of mist-covered tea gardens and rolling
+                                hills. The Deluxe Valley View Room combines warm wooden interiors with modern comforts,
+                                creating a serene retreat in the heart of nature. <br><br>Features:</p>
+
+                            <ul>
+                                <li>Private balcony with valley view</li>
+
+                                <li>King-size bed</li>
+
+                                <li>32” Smart TV</li>
+
+                                <li>Complimentary breakfast</li>
+
+                                <li>Free Wi-Fi</li>
+
+                                <li>2 Adults</li>
+                            </ul>
+                            <div class="d-flex justify-content-between ">
+                                <a class="btn btn-light text-success" data-bs-toggle="modal"
+                                    data-bs-target="#modal1">Reserve Now</a>
+                                <a class="btn btn-light text-success ms-5" data-bs-toggle="modal"
+                                    data-bs-target="#modalfaq1">Booking FAQ</a>
+                            </div>
+                            <!-- FAQ modal -->
+                            <div id="modalfaq1" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-success d-flex justify-content-center text-light">
+                                            <h1>FAQs</h1>
+                                        </div>
+                                        <div class="modal-body bg-secondary bg-opacity-25">
+                                            <!-- Accordion -->
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapse" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="false" aria-controls="collapseOne">
+                                                            What are the check-in and check-out timings?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">Check-in starts at 2:00 PM, and
+                                                                check-out is until 11:00 AM. Early check-in or late
+                                                                check-out may be available upon request, subject to room
+                                                                availability.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                            aria-expanded="false" aria-controls="collapseTwo">
+                                                            What is your cancellation and refund policy?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">Guests can cancel their booking
+                                                                up to 48 hours before check-in for a full refund.
+                                                                Cancellations made within 48 hours of arrival may incur
+                                                                a one-night charge.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                            aria-expanded="false" aria-controls="collapseThree">
+                                                            How can I make a reservation and confirm my booking?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">You can book directly through
+                                                                our website by selecting your preferred room and dates.
+                                                                A confirmation email will be sent once the payment is
+                                                                successfully completed.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                            aria-expanded="false" aria-controls="collapseFour">
+                                                            What amenities are included with the stay?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">All rooms include complimentary
+                                                                Wi-Fi, air conditioning, daily housekeeping, access to
+                                                                the swimming pool, and free parking.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                            aria-expanded="false" aria-controls="collapseFive">
+                                                            Is breakfast included in the room price?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">
+                                                                Yes, a complimentary breakfast buffet is included with
+                                                                all room bookings.
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer bg-success">
+                                            <Button class="btn btn-secondary text-light"
+                                                data-bs-dismiss="modal">Close</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full screen modal -->
+                            <div id="modal1" class="modal fade">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header d-flex justify-content-center bg-success text-light">
+                                            <h1>Bookings</h1>
+                                        </div>
+                                        <div class="modal-body bg-secondary bg-opacity-25">
+                                            <!--Booking Form -->
+                                            <form class="row g-3 text-success">
+                                                <div class="col-md-6">
+                                                    <label for="name" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="name">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                                <fieldset class="row mt-3 mb-3">
+                                                    <legend class="col-form-label col-sm-2 pt-1">Room Type</legend>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check pt-1">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="gridRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="gridRadios1">
+                                                                Deluxe Valley View Room
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="col-12">
+                                                    <div class="form-check ps-1">
+                                                        <label for="number" class="form-label">No. of Rooms</label>
+                                                        <select id="number" class="form-select w-25">
+                                                            <option selected>Choose...</option>
+                                                            <option>-1-</option>
+                                                            <option>-2-</option>
+                                                            <option>-3-</option>
+                                                            <option>-4-</option>
+                                                            <option>-5-</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="datein" class="form-label">Check-in-date</label>
+                                                    <input type="datetime-local" class="form-control" id="datein"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="dateout" class="form-label">Check-out-date</label>
+                                                    <input type="datetime-local" class="form-control" id="dateout"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="address"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputAddress2" class="form-label">Address 2</label>
+                                                    <input type="text" class="form-control" id="inputAddress2"
+                                                        placeholder="Apartment, studio, or floor">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="inputCity" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="inputCity">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="inputState" class="form-label">State</label>
+                                                    <select id="inputState" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>Andhra Pradesh</option>
+                                                        <option>Arunachal Pradesh </option>
+                                                        <option>Assam</option>
+                                                        <option>Bihar</option>
+                                                        <option>Chhattisgarh</option>
+                                                        <option>Goa</option>
+                                                        <option>Gujarat</option>
+                                                        <option>Haryana</option>
+                                                        <option>Himachal Pradesh</option>
+                                                        <option>Jharkhand</option>
+                                                        <option>Karnataka</option>
+                                                        <option>Kerala</option>
+                                                        <option>Madhya Pradesh</option>
+                                                        <option>Maharashtra</option>
+                                                        <option>Manipur</option>
+                                                        <option>Meghalaya</option>
+                                                        <option>Mizoram</option>
+                                                        <option>Nagaland</option>
+                                                        <option>Odisha</option>
+                                                        <option>Punjab</option>
+                                                        <option>Rajasthan</option>
+                                                        <option>Sikkim</option>
+                                                        <option>Tamil Nadu</option>
+                                                        <option>Telangana</option>
+                                                        <option>Tripura</option>
+                                                        <option>Uttar Pradesh</option>
+                                                        <option>Uttarakhand</option>
+                                                        <option>West Bengal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label for="pincode" class="form-label">Pincode</label>
+                                                    <input type="number" class="form-control" id="pincode">
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label" for="gridCheck">
+                                                            Send Booking details to the above mentioned email
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-success"
+                                                        data-bs-dismiss="modal">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer bg-success">
+                                            <Button class="btn btn-secondary text-light"
+                                                data-bs-dismiss="modal">Close</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 2 months ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img height="38.5%" src="https://planetmunnar.com/images/rooms/accom-luxury-suite.jpg"
+                            class="card-img-top" alt="Image2">
+                        <div class="card-body bg-success text-light">
+                            <h5 class="card-title">Premium Mountain Suite <br><br> ₹9,500 / night </h5>
+                            <p class="card-text">Designed for elevated comfort, the Premium Mountain Suite offers
+                                expansive space, panoramic windows, and a cozy seating area overlooking the highlands of
+                                Munnar. <br><br><br> Features:</p>
+                            <ul>
+                                <li>Separate living area</li>
+
+                                <li>Floor-to-ceiling windows</li>
+
+                                <li>Luxury bathroom with bathtub</li>
+
+                                <li>Mini bar</li>
+
+                                <li>Tea/Coffee maker</li>
+
+                                <li>3 Adults</li>
+                            </ul>
+                            <div class="d-flex justify-content-between ">
+                                <a class="btn btn-light text-success" data-bs-toggle="modal"
+                                    data-bs-target="#modal2">Reserve Now</a>
+                                <a class="btn btn-light text-success ms-5" data-bs-toggle="modal"
+                                    data-bs-target="#modalfaq2">Booking FAQ</a>
+                            </div>
+                            <!-- FAQ Modal -->
+                            <div id="modalfaq2" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-success d-flex justify-content-center text-light">
+                                            <h1>FAQs</h1>
+                                        </div>
+                                        <div class="modal-body bg-secondary bg-opacity-25">
+                                            <!-- Accordion -->
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapse" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="false" aria-controls="collapseOne">
+                                                            What are the check-in and check-out timings?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">Check-in starts at 2:00 PM, and
+                                                                check-out is until 11:00 AM. Early check-in or late
+                                                                check-out may be available upon request, subject to room
+                                                                availability.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                            aria-expanded="false" aria-controls="collapseTwo">
+                                                            What is your cancellation and refund policy?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">Guests can cancel their booking
+                                                                up to 48 hours before check-in for a full refund.
+                                                                Cancellations made within 48 hours of arrival may incur
+                                                                a one-night charge.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                            aria-expanded="false" aria-controls="collapseThree">
+                                                            How can I make a reservation and confirm my booking?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">You can book directly through
+                                                                our website by selecting your preferred room and dates.
+                                                                A confirmation email will be sent once the payment is
+                                                                successfully completed.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                            aria-expanded="false" aria-controls="collapseFour">
+                                                            What amenities are included with the stay?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">All rooms include complimentary
+                                                                Wi-Fi, air conditioning, daily housekeeping, access to
+                                                                the swimming pool, and free parking.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                            aria-expanded="false" aria-controls="collapseFive">
+                                                            Is breakfast included in the room price?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">
+                                                                Yes, a complimentary breakfast buffet is included with
+                                                                all room bookings.
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer bg-success">
+                                            <Button class="btn btn-secondary text-light"
+                                                data-bs-dismiss="modal">Close</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full screen modal -->
+                            <div id="modal2" class="modal fade">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header d-flex justify-content-center bg-success text-light">
+                                            <h1>Bookings</h1>
+                                        </div>
+                                        <div class="modal-body bg-secondary bg-opacity-25">
+                                            <!--Booking Form -->
+                                            <form class="row g-3 text-success">
+                                                <div class="col-md-6">
+                                                    <label for="name" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="name">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                                <fieldset class="row mt-3 mb-3">
+                                                    <legend class="col-form-label col-sm-2 pt-1">Room Type</legend>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check pt-1">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="gridRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="gridRadios1">
+                                                                Premium Mountain Suite
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="col-12">
+                                                    <div class="form-check ps-1">
+                                                        <label for="number" class="form-label">No. of Rooms</label>
+                                                        <select id="number" class="form-select w-25">
+                                                            <option selected>Choose...</option>
+                                                            <option>-1-</option>
+                                                            <option>-2-</option>
+                                                            <option>-3-</option>
+                                                            <option>-4-</option>
+                                                            <option>-5-</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="datein" class="form-label">Check-in-date</label>
+                                                    <input type="datetime-local" class="form-control" id="datein"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="dateout" class="form-label">Check-out-date</label>
+                                                    <input type="datetime-local" class="form-control" id="dateout"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="address"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputAddress2" class="form-label">Address 2</label>
+                                                    <input type="text" class="form-control" id="inputAddress2"
+                                                        placeholder="Apartment, studio, or floor">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="inputCity" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="inputCity">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="inputState" class="form-label">State</label>
+                                                    <select id="inputState" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>Andhra Pradesh</option>
+                                                        <option>Arunachal Pradesh </option>
+                                                        <option>Assam</option>
+                                                        <option>Bihar</option>
+                                                        <option>Chhattisgarh</option>
+                                                        <option>Goa</option>
+                                                        <option>Gujarat</option>
+                                                        <option>Haryana</option>
+                                                        <option>Himachal Pradesh</option>
+                                                        <option>Jharkhand</option>
+                                                        <option>Karnataka</option>
+                                                        <option>Kerala</option>
+                                                        <option>Madhya Pradesh</option>
+                                                        <option>Maharashtra</option>
+                                                        <option>Manipur</option>
+                                                        <option>Meghalaya</option>
+                                                        <option>Mizoram</option>
+                                                        <option>Nagaland</option>
+                                                        <option>Odisha</option>
+                                                        <option>Punjab</option>
+                                                        <option>Rajasthan</option>
+                                                        <option>Sikkim</option>
+                                                        <option>Tamil Nadu</option>
+                                                        <option>Telangana</option>
+                                                        <option>Tripura</option>
+                                                        <option>Uttar Pradesh</option>
+                                                        <option>Uttarakhand</option>
+                                                        <option>West Bengal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label for="pincode" class="form-label">Pincode</label>
+                                                    <input type="number" class="form-control" id="pincode">
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label" for="gridCheck">
+                                                            Send Booking details to the above mentioned email
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-success"
+                                                        data-bs-dismiss="modal">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer bg-success">
+                                            <Button class="btn btn-secondary text-light"
+                                                data-bs-dismiss="modal">Close</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 2 months ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img height="38.5%"
+                            src="https://elixirwoods.com/wp-content/uploads/al_opt_content/IMAGE/elixirwoods.com/wp-content/uploads/2025/07/ElixirW-165-min-scaled.jpg.bv_resized_mobile.jpg.bv.webp?bv_host=elixirwoods.com"
+                            class="card-img-top" alt="Image3">
+                        <div class="card-body bg-success text-light">
+                            <h5 class="card-title">Honeymoon Private Villa <br><br> ₹12,500 / night</h5>
+                            <p class="card-text">Crafted for unforgettable moments, the Honeymoon Private Villa offers
+                                complete privacy, elegant decor, and intimate hilltop views — perfect for couples
+                                seeking a romantic escape. <br><br><br> Features:</p>
+                            <ul>
+                                <li>Private sit-out area</li>
+
+                                <li>Romantic decor setup</li>
+
+                                <li>Candlelight dinner option</li>
+
+                                <li>Jacuzzi</li>
+
+                                <li>Personalized service</li>
+
+                                <li>2 Adults</li>
+                            </ul>
+                            <div class="d-flex justify-content-between ">
+                                <a class="btn btn-light text-success" data-bs-toggle="modal"
+                                    data-bs-target="#modal3">Reserve Now</a>
+                                <a class="btn btn-light text-success ms-5" data-bs-toggle="modal"
+                                    data-bs-target="#modalfaq3">Booking FAQ</a>
+                            </div>
+                            <!-- FAQ Modal -->
+                            <div id="modalfaq3" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-success d-flex justify-content-center text-light">
+                                            <h1>FAQs</h1>
+                                        </div>
+                                        <div class="modal-body bg-secondary bg-opacity-25">
+                                            <!-- Accordion -->
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapse" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="false" aria-controls="collapseOne">
+                                                            What are the check-in and check-out timings?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">Check-in starts at 2:00 PM, and
+                                                                check-out is until 11:00 AM. Early check-in or late
+                                                                check-out may be available upon request, subject to room
+                                                                availability.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                            aria-expanded="false" aria-controls="collapseTwo">
+                                                            What is your cancellation and refund policy?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">Guests can cancel their booking
+                                                                up to 48 hours before check-in for a full refund.
+                                                                Cancellations made within 48 hours of arrival may incur
+                                                                a one-night charge.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                            aria-expanded="false" aria-controls="collapseThree">
+                                                            How can I make a reservation and confirm my booking?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">You can book directly through
+                                                                our website by selecting your preferred room and dates.
+                                                                A confirmation email will be sent once the payment is
+                                                                successfully completed.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                            aria-expanded="false" aria-controls="collapseFour">
+                                                            What amenities are included with the stay?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">All rooms include complimentary
+                                                                Wi-Fi, air conditioning, daily housekeeping, access to
+                                                                the swimming pool, and free parking.</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                            aria-expanded="false" aria-controls="collapseFive">
+                                                            Is breakfast included in the room price?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <strong class="text-success">
+                                                                Yes, a complimentary breakfast buffet is included with
+                                                                all room bookings.
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer bg-success">
+                                            <Button class="btn btn-secondary text-light"
+                                                data-bs-dismiss="modal">Close</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Full screen modal -->
+                            <div id="modal3" class="modal fade">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header d-flex justify-content-center bg-success text-light">
+                                            <h1>Bookings</h1>
+                                        </div>
+                                        <div class="modal-body bg-secondary bg-opacity-25">
+                                            <!--Booking Form -->
+                                            <form class="row g-3 text-success">
+                                                <div class="col-md-6">
+                                                    <label for="name" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="name">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                                <fieldset class="row mt-3 mb-3">
+                                                    <legend class="col-form-label col-sm-2 pt-1">Room Type</legend>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check pt-1">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="gridRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="gridRadios1">
+                                                                Honeymoon Private Villa
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="col-12">
+                                                    <div class="form-check ps-1">
+                                                        <label for="number" class="form-label">No. of Rooms</label>
+                                                        <select id="number" class="form-select w-25">
+                                                            <option selected>Choose...</option>
+                                                            <option>-1-</option>
+                                                            <option>-2-</option>
+                                                            <option>-3-</option>
+                                                            <option>-4-</option>
+                                                            <option>-5-</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="datein" class="form-label">Check-in-date</label>
+                                                    <input type="datetime-local" class="form-control" id="datein"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="dateout" class="form-label">Check-out-date</label>
+                                                    <input type="datetime-local" class="form-control" id="dateout"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="address"
+                                                        placeholder="1234 Main St">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputAddress2" class="form-label">Address 2</label>
+                                                    <input type="text" class="form-control" id="inputAddress2"
+                                                        placeholder="Apartment, studio, or floor">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="inputCity" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="inputCity">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="inputState" class="form-label">State</label>
+                                                    <select id="inputState" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>Andhra Pradesh</option>
+                                                        <option>Arunachal Pradesh </option>
+                                                        <option>Assam</option>
+                                                        <option>Bihar</option>
+                                                        <option>Chhattisgarh</option>
+                                                        <option>Goa</option>
+                                                        <option>Gujarat</option>
+                                                        <option>Haryana</option>
+                                                        <option>Himachal Pradesh</option>
+                                                        <option>Jharkhand</option>
+                                                        <option>Karnataka</option>
+                                                        <option>Kerala</option>
+                                                        <option>Madhya Pradesh</option>
+                                                        <option>Maharashtra</option>
+                                                        <option>Manipur</option>
+                                                        <option>Meghalaya</option>
+                                                        <option>Mizoram</option>
+                                                        <option>Nagaland</option>
+                                                        <option>Odisha</option>
+                                                        <option>Punjab</option>
+                                                        <option>Rajasthan</option>
+                                                        <option>Sikkim</option>
+                                                        <option>Tamil Nadu</option>
+                                                        <option>Telangana</option>
+                                                        <option>Tripura</option>
+                                                        <option>Uttar Pradesh</option>
+                                                        <option>Uttarakhand</option>
+                                                        <option>West Bengal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label for="pincode" class="form-label">Pincode</label>
+                                                    <input type="number" class="form-control" id="pincode">
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label" for="gridCheck">
+                                                            Send Booking details to the above mentioned email
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-success"
+                                                        data-bs-dismiss="modal">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer bg-success">
+                                            <Button class="btn btn-secondary text-light"
+                                                data-bs-dismiss="modal">Close</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Last updated 2 months ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Amenities -->
+        <section id="amenities" class="mt-5">
+            <h4 class="mt-5">Amenities</h4>
+            <div class="container text-center pt-4">
+                <div class="row" id="amenitiesaccordion">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-1 p-sm-1">
+                        <button class="btn btn-success px-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                            <h4><i class="fa-solid fa-person-swimming"></i><br>Infinity Pool</h4>
+                        </button>
+                        <div class="collapse" id="collapseExample1" data-bs-parent="#amenitiesaccordion">
+                            <div class="card card-body">
+                                Relax in our temperature-controlled infinity pool overlooking the misty hills. <br><br>
+                                <img height="70%"
+                                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/431906902.jpg?k=9f9a43d87a6d1f8ce55336f0ff42059a9f5f66494f23b334ca2426787b6ea124&o="
+                                    alt="Pool Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-1 p-sm-1">
+                        <button class="btn btn-success px-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                            <h4><i class="fa-solid fa-utensils"></i><br>Restaurant</h4>
+                        </button>
+                        <div class="collapse" id="collapseExample2" data-bs-parent="#amenitiesaccordion">
+                            <div class="card card-body">
+                                Enjoy curated local and international dishes prepared by expert chefs. <br><br>
+                                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/742263607.jpg?k=b9e13568815b740d74e624473438b72fa3049263f3b45a443746b26c8a832f60&o="
+                                    alt="Restaurant Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-1 p-sm-1">
+                        <button class="btn btn-success" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                            <h4><i class="fa-solid fa-dumbbell"></i><br>Fitness Studio</h4>
+                        </button>
+                        <div class="collapse" id="collapseExample3" data-bs-parent="#amenitiesaccordion">
+                            <div class="card card-body">
+                                Stay active during your stay with our fully equipped modern gym overlooking the hills.
+                                <br><br>
+                                <img src="https://cdn.sanity.io/images/ocl5w36p/prod5/246b10f648c88c2d645388bc9be4222889186a09-2560x1706.jpg?w=480&auto=format&dpr=2"
+                                    alt="Gym Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-1  p-sm-1">
+                        <button class="btn btn-success" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                            <h4><i class="fa-solid fa-spa"></i><br>Ayurvedic Spa</h4>
+                        </button>
+                        <div class="collapse" id="collapseExample4" data-bs-parent="#amenitiesaccordion">
+                            <div class="card card-body">
+                                Experience authentic therapeutic treatments for complete relaxation. <br><br>
+                                <img src="https://specialplacesofindia.com/wp-content/uploads/2025/01/Treat-yourself-to-a-wellness-retreat-at-a-spa-in-Munnarfeature-image.jpg"
+                                    alt="Spa Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Activities -->
+        <section id="activities" class="mt-5">
+            <h4>Activities</h4>
+            <div class="row pt-2">
+                <div class="col-6 pt-5">
+                    <img height="105%" width="70%" class="rounded"
+                        src="https://roamers.in/assets/img/kolukkumalai-img/2.jpg" alt="Image1">
+                </div>
+                <div class="col-6 pt-5">
+                    <h4>🌄 Sunrise Trek</h4>
+                    <p>
+                        Start your day with a guided trek through mist-covered hills and rolling tea plantations. As the
+                        sun rises over the mountains, enjoy breathtaking panoramic views and refreshing mountain air.
+                        <br>
+                        🕒 Duration: 2 - 3 Hours
+                        <br>
+                        📊 Difficulty: Moderate
+                        <br>
+                        👥 Suitable For: Couples, Nature Lovers, Adventure Seekers
+                    </p>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-6 pt-5">
+                    <h4>🚙 Jeep Safari</h4>
+                    <p>
+                        Explore rugged terrains and hidden forest trails in an exciting off-road jeep safari. Discover
+                        scenic viewpoints and untouched landscapes while enjoying a thrilling ride.
+                        <br>
+                        🕒 Duration: 1.5 - 2 Hours
+                        <br>
+                        📊 Difficulty: Easy
+                        <br>
+                        👥 Suitable For: Families, Groups, All Age Categories
+                    </p>
+                </div>
+                <div class="col-6 ps-5 pt-5">
+                    <img height="80%" width="80%" class="rounded"
+                        src="https://miro.medium.com/v2/resize:fit:1400/1*Bcc7Vpnzz-MqCAIJ4EywYA.jpeg" alt="Image2">
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-6 pt-4">
+                    <img height="105%" width="70%" class="rounded"
+                        src="https://www.easeindiatrip.com/blog/wp-content/uploads/2025/10/Kerala-Munnar-Tea-Gardens--1024x592.jpg"
+                        alt="Image3">
+                </div>
+                <div class="col-6 pt-4">
+                    <h4>🍃 Tea Walk</h4>
+                    <p>
+                        Take a peaceful stroll through lush tea gardens and learn about the journey of tea from leaf to
+                        cup. Experience the aroma of fresh leaves and interact with local plantation workers.
+                        <br>
+                        🕒 Duration: 1 - 1.5 Hours
+                        <br>
+                        📊 Difficulty: Easy
+                        <br>
+                        👥 Suitable For: Families, Senior Guests, Relaxation Seekers
+                    </p>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-6 pt-5">
+                    <h4>🔥 Campfire Night</h4>
+                    <p>
+                        Unwind under the starlit sky with a cozy campfire experience. Enjoy light music, storytelling,
+                        snacks, and the warmth of the fire in the cool mountain breeze.
+                        <br>
+                        🕒 Duration: 2 Hours (Evening)
+                        <br>
+                        📊 Difficulty: Relaxed
+                        <br>
+                        👥 Suitable For: Couples, Families, Friends
+                </div>
+                <div class="col-6 ps-5 pt-5">
+                    <img height="80%" width="80%" class="rounded"
+                        src="https://rukmini-ct.flixcart.com/q_75,w_420,h_300,fl_progressive,e_sharpen:80,c_fill,dpr_2,f_auto/ct-hotel-images/places/hotels/cms/3960/3960714/images/image_3960714_b5ec0475-395d-4c32-8aeb-bd192463ade7_proc.jpeg"
+                        alt="Image4">
+                </div>
+            </div>
+        </section>
+        <!-- Gallery -->
+        <section id="gallery" class="mt-5">
+            <h4>Gallery</h4>
+
+            <div class="gallery-wrapper">
+                <div class="gallery-track">
+
+                    <!-- Duplicating cards for smooth infinite effect -->
+
+                    <!-- Card 1 -->
+                    <div class="card gallery-card">
+                        <img src="https://gos3.ibcdn.com/44ff0b94964511eeaff50a58a9feac02.jpg" class="card-img-top">
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card gallery-card">
+                        <img src="https://kondodyhotels.com/images/resorts/haze-kites/haze-about-th.jpg" class="card-img-top">
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card gallery-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT012y9N4M6iqf31yVACru5eYTqttlZhx90xQ&s" class="card-img-top">
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card gallery-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPrlevM36bRGgvQLGGqXwdxVSDicYYVnsiw&s" class="card-img-top">
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card gallery-card">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/491385960.jpg?k=283fc9ee5cd69381f642882da3d2e9aa32311c21cb0ffbf784bf4591ad17bcbf&o=" class="card-img-top">
+                    </div>
+
+                    <!-- DUPLICATING SAME CARDS AGAIN -->
+
+                    <!-- Card 1 -->
+                    <div class="card gallery-card">
+                        <img src="https://gos3.ibcdn.com/44ff0b94964511eeaff50a58a9feac02.jpg" class="card-img-top">
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card gallery-card">
+                        <img src="https://kondodyhotels.com/images/resorts/haze-kites/haze-about-th.jpg" class="card-img-top">
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card gallery-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT012y9N4M6iqf31yVACru5eYTqttlZhx90xQ&s" class="card-img-top">
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card gallery-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIPrlevM36bRGgvQLGGqXwdxVSDicYYVnsiw&s" class="card-img-top">
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card gallery-card">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/491385960.jpg?k=283fc9ee5cd69381f642882da3d2e9aa32311c21cb0ffbf784bf4591ad17bcbf&o=" class="card-img-top">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Location -->
+        <section id="location" class="mt-5">
+            <h4 class="pb-4">Location</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62859.62070723009!2d76.87368834863284!3d10.039429999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0797cb839fcc63%3A0xda5baffcb31d6f10!2sMisty%20D%20Silver%20Resort%20Munnar!5e0!3m2!1sen!2sin!4v1771785214008!5m2!1sen!2sin" width="600" height="450" style="border:0;width: 100%;height: 450px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="mt-5">
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                    <div class="card border border-success ms-1">
+                        <div class="card-body">
+                            <h4>Contact</h4>
+                            <ul class="list-unstyled pt-3">
+                                <li><i class="fa-solid fa-envelope"></i> E-mail: febamathew2002@gmail.com</li>
+                                <li><i class="fa-solid fa-phone"></i>Phone: 9447403835</li>
+                                <li><i class="fa-brands fa-whatsapp"></i>Message: 8590051704</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Reviews  -->
+        <section id="reviews" class="mt-5">
+            <h4>Reviews</h4>
+            <div class="row mt-5">
+                <div class="col-10 col-md-4">
+                    <div class="progress progress-success" role="progressbar" aria-label="Basic example"
+                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: 90%"></div>
+                    </div>
+                    <P>Cleanliness</P>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: 80%"></div>
+                    </div>
+                    <P>Staff Service</P>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: 100%"></div>
+                    </div>
+                    <P>Comfort</P>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: 75%"></div>
+                    </div>
+                    <P>Facilities & Amenities</P>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: 90%"></div>
+                    </div>
+                    <P>Value for Money</P>
+                </div>
+                <div class="col-12 col-md-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <P>“Absolutely wonderful stay!”
+                        The rooms were clean and spacious, and the staff was extremely friendly. The pool area was
+                        beautiful and very relaxing. Would definitely visit again!
+                        <br>
+                        <i class="fa-regular fa-user"></i>
+                        July 2023
+                    </P>
+                    <hr>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <P>“Perfect weekend getaway.”
+                        The resort ambiance was peaceful and calm. Breakfast was delicious with many options. The
+                        check-in process was smooth and quick.
+                        <br>
+                        <i class="fa-regular fa-user"></i>
+                        November 2023
+                    </P>
+                    <hr>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <P>“Great hospitality and service.”
+                        Staff members were very helpful and attentive. The rooms were comfortable and well-maintained.
+                        Highly recommended for families.
+                        <br>
+                        <i class="fa-regular fa-user"></i>
+                        January 2024
+                    </P>
+                    <hr>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <P>“Luxury experience at a reasonable price.”
+                        Loved the interior design and cleanliness. The view from our balcony was amazing. Worth every
+                        penny!
+                        <br>
+                        <i class="fa-regular fa-user"></i>
+                        April 2024
+                    </P>
+                    <hr>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <P>“Memorable vacation.”
+                        Beautiful surroundings and excellent amenities. The swimming pool and evening activities made
+                        our stay special.
+                        <br>
+                        <i class="fa-regular fa-user"></i>
+                        October 2025
+                    </P>
+                    <hr>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-success h-100 pt-5">
+        <div class="row text-light ps-3">
+            <div class="col-3">
+                <h6>Misty Highlands</h6>
+            </div>
+            <div class="col-3">
+                <h6>Contact Us</h6>
+                <ul class="list-unstyled pt-3">
+                    <li><i class="fa-solid fa-envelope"></i> E-mail: febamathew2002@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i>Phone: 9447403835</li>
+                    <li><i class="fa-brands fa-whatsapp"></i>Message: 8590051704</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled pt-3">
+                    <li><a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#home">Home</a></li>
+                    <li><a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#about">About</a></li>
+                    <li><a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#rooms">Rooms</a></li>
+                    <li><a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#amenities">Amenities</a></li>
+                    <li><a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#activities">Activities</a></li>
+                    <li><a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#gallery">Gallery</a></li>
+                    <li><a class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            aria-current="page" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h6>Social Share</h6>
+                <i class="fa-brands fa-square-facebook"></i><i class="fa-brands fa-instagram"></i><i
+                    class="fa-brands fa-twitter"></i><i class="fa-brands fa-pinterest"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
